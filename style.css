@@ -1417,3 +1417,9 @@ section.who-we-are.section {
     padding-bottom: 75px;
   }
 }
+
+.accent-line {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block;
+}
