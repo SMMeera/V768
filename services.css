@@ -500,4 +500,16 @@ body {
     transform: none;
     transition: none;
   }
+
+   @media (max-width: 768px) {
+  .contact-right {
+    text-align: center;
+  }
+
+  .contact-right .accent-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 }
