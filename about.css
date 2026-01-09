@@ -1448,4 +1448,29 @@ body {
     height: 70px;
     margin-bottom: 8px;
   }
+
+}
+
+
+/* FIX ACCENT LINE POSITION ON MOBILE */
+@media (max-width: 768px) {
+  .accent-line {
+    margin: 12px auto 28px auto;
+  }
+
+  /* If accent line is inside text blocks */
+  h1 + .accent-line,
+  h2 + .accent-line,
+  h3 + .accent-line {
+    display: block;
+    margin: 14px auto 24px auto;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .contact-right .accent-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
