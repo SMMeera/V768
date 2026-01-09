@@ -23,6 +23,8 @@ section {
   padding-right: 32px;
 }
 
+
+
 @media (max-width: 768px) {
   .container {
     padding-left: 16px;
@@ -203,14 +205,19 @@ main {
 }
 
 .nav-container {
-  width: 100%;
   max-width: 1320px;
+  width: 100%;
   margin: 0 auto;
-  padding: 16px 64px;
+  padding: 16px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: nowrap;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 12px 16px;
+  }
 }
 
 .nav-links {
@@ -801,6 +808,7 @@ main {
   font-weight: 700;
   margin-bottom: 18px;
   display: inline-block;
+  
 }
 
 .industries-content h2 {
@@ -1419,7 +1427,28 @@ section.who-we-are.section {
 }
 
 .accent-line {
+  width: 72px;
+  height: 3px;
+  background: linear-gradient(90deg, #f97316, #ff9f4a);
+  margin: 18px auto 32px;
+  display: block;
+}
+
+.accent-line {
   margin-left: auto !important;
   margin-right: auto !important;
   display: block;
+}
+
+.section-header,
+.hero-content,
+.about-content {
+  text-align: center;
+  width: 100%;
+}
+
+.who-we-are {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
