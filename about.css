@@ -1,3 +1,51 @@
+/* === GLOBAL FLUID LAYOUT SYSTEM (SAME AS HOME) === */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Master width control */
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+/* Full-bleed section wrapper */
+.full-width {
+  width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+ 
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 /* =========================
    NAVBAR (GLOBAL – ALL PAGES)
 ========================= */
@@ -108,7 +156,7 @@ body {
 
 .about-hero {
   background: transparent;
-  padding: 110px 0;
+  
   color: #ffffff;
 }
 
@@ -139,9 +187,7 @@ body {
   max-width: 620px;
 }
 
-.about-hero-content .accent-line {
-  margin: 12px 0 28px;
-}
+
 
 .about-hero-content p {
   font-size: 16px;
@@ -201,9 +247,7 @@ body {
     margin-right: auto;
   }
 
-  .about-hero-content .accent-line {
-    margin: 16px auto 28px;
-  }
+  
 }
 
 @media (max-width: 600px) {
@@ -289,9 +333,10 @@ body {
 
 .about-vision-mission {
   background: transparent;
-  padding: 100px 0 80px; /* 🔥 reduced bottom padding */
+   /* 🔥 reduced bottom padding */
   text-align: center;
 }
+
 
 /* SECTION HEADING */
 .section-heading {
@@ -302,9 +347,7 @@ body {
   margin-bottom: 12px;
 }
 
-.about-vision-mission .accent-line {
-  margin: 0 auto 60px;
-}
+
 
 /* GRID */
 .vision-mission-grid {
@@ -425,6 +468,11 @@ body {
   transform: translateY(-120px);
 }
 
+.about-vision-mission .accent-line {
+  margin: 16px auto 48px auto;
+  display: block;
+}
+
 /* ================================
    RESPONSIVE
 ================================ */
@@ -457,9 +505,7 @@ body {
 }
 
 /* CONTAINER SPACING */
-.container {
-  padding: 0 64px;
-}
+
 
 
 
@@ -469,7 +515,7 @@ body {
 ================================ */
 .about-why {
   background: transparent;
-  padding: 120px 0;
+  
   position: relative;              /* NEW */
   overflow: hidden;                /* NEW */
 }
@@ -655,7 +701,7 @@ body {
 
 .unique-value {
   background: transparent;
-  padding: 140px 0;
+  
   overflow: hidden;
   position: relative;
 }
@@ -714,13 +760,7 @@ body {
   margin-bottom: 12px;
 }
 
-.uv-main-content .accent-line {
-  display: block;
-  width: 42px;
-  height: 3px;
-  background: #f97316;
-  margin: 0 auto 20px;
-}
+
 
 .uv-main-content p {
   font-size: 15.5px;
@@ -1474,3 +1514,4 @@ body {
     margin-right: auto;
   }
 }
+
