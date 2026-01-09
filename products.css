@@ -578,4 +578,22 @@ html, body {
   .reveal-scale {
     transform: translateY(30px);
   }
+
+}
+
+.hero p {
+  margin-bottom: 28px;   /* creates space before the button */
+}
+
+@media (max-width: 768px) {
+  .hero p {
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-right .accent-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
