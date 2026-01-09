@@ -1,6 +1,51 @@
 /* ================================
    SERVICES SECTION
 ================================ */
+/* ================================
+   GLOBAL FLUID LAYOUT SYSTEM
+   (Same as Home & About)
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Master width controller */
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+/* Full-bleed section */
+.full-width {
+  width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 
 body {
   background:
@@ -19,7 +64,7 @@ body {
 
 .services-section {
   background: transparent;
-  padding: 120px 0;
+  padding: min(12vh, 140px) 0;
   color: #ffffff;
 }
 
@@ -45,6 +90,10 @@ body {
   align-items: center;
   gap: 80px;
   margin-bottom: 140px;
+}
+
+.service-row {
+  width: 100%;
 }
 
 /* 🔥 FORCE OPPOSITE SIDES */
@@ -500,8 +549,9 @@ body {
     transform: none;
     transition: none;
   }
+}
 
-   @media (max-width: 768px) {
+@media (max-width: 768px) {
   .contact-right {
     text-align: center;
   }
@@ -510,6 +560,4 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
-}
-
 }
