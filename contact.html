@@ -6,8 +6,8 @@
   <title>Contact Us | VINDRU</title>
 
   <!-- Global CSS -->
-     <link rel="stylesheet" href="style.css">
-
+     
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="contact.css">
 
 </head>
@@ -36,7 +36,7 @@
   <div class="container contact-grid">
 
     <!-- LEFT INFO -->
-    <div class="contact-info reveal-left">
+    <div class="contact-header reveal-left">
       <h2 class="reveal-up">Get in touch with us</h2>
       <div class="accent-line reveal-scale"></div>
 
@@ -54,35 +54,62 @@
   <form id="vindru-contact-form" class="custom-form">
 
     <div class="form-group reveal-up delay-1">
-      <label>Name *</label>
-      <input type="text" name="name" required>
-    </div>
+  <label>Your Name *</label>
+  <input type="text" name="name" required>
+</div>
 
-    <div class="form-group reveal-up delay-1">
-      <label>Company Name</label>
-      <input type="text" name="company">
-    </div>
+<div class="form-group reveal-up delay-1">
+  <label>Company Name</label>
+  <input type="text" name="company">
+</div>
 
-    <div class="form-group reveal-up delay-1">
-      <label>Email *</label>
-      <input type="email" name="email" required>
-    </div>
+<div class="form-group reveal-up delay-1">
+  <label>Country *</label>
+  <select name="country" required>
+    <option value="">Select</option>
+    <option>India</option>
+    <option>UAE</option>
+    <option>Saudi Arabia</option>
+    <option>Qatar</option>
+    <option>Oman</option>
+    <option>Other</option>
+  </select>
+</div>
 
-    <div class="form-group reveal-up delay-1">
-      <label>Phone</label>
-      <input type="tel" name="phone">
-    </div>
+<div class="form-group reveal-up delay-1">
+  <label>City *</label>
+  <input type="text" name="city" required>
+</div>
 
-    <div class="form-group reveal-up delay-1">
-      <label>Message *</label>
-      <textarea name="message" rows="4" required></textarea>
-    </div>
+<div class="form-group reveal-up delay-1">
+  <label>Phone *</label>
+  <input type="tel" name="phone" required>
+</div>
 
-    <button type="submit" class="primary-btn">
-      Send Enquiry
-    </button>
+<div class="form-group reveal-up delay-1">
+  <label>Email *</label>
+  <input type="email" name="email" required>
+</div>
 
-    <p id="form-status"></p>
+<div class="form-group reveal-up delay-1">
+  <label>Requirement</label>
+  <textarea name="requirement" rows="4"></textarea>
+</div>
+
+<div class="form-group terms reveal-up delay-1">
+  <label class="checkbox">
+    <input type="checkbox" required>
+    <span>
+      By submitting this request, you hereby authorize Vindru to contact you through the collected information.
+    </span>
+  </label>
+</div>
+
+<button type="submit" class="primary-btn">
+  Send Enquiry
+</button>
+
+<p id="form-status"></p>
 
   </form>
 </div>
@@ -93,7 +120,7 @@
 
 <section class="legal-section">
 
-  <div class="legal-wrapper">
+  <div class="legal-wrapper container">
      
     <!-- RIGHT : STICKY HEADING -->
     <div class="legal-heading reveal-up">
@@ -238,7 +265,7 @@
     <!-- RIGHT SIDE -->
     <div class="contact-right">
       <h2>Contact Us</h2>
-      <div class="accent-line"></div>
+      
 
       <ul class="contact-details">
         <li>
