@@ -1,6 +1,14 @@
 /* =================================================
    CONTACT PAGE (ZOHO FORM EMBED SAFE)
 ================================================= */
+
+
+
+
+
+
+
+
 body {
   background:
     linear-gradient(
@@ -16,17 +24,35 @@ body {
   background-attachment: fixed;
 }
 
+
 .contact-page {
   background: transparent;
   padding: min(10vh, 120px) 0;
   color: #ffffff;
 }
+/* 🔒 HARD-LOCK header alignment across all devices */
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* locks center */
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* Prevent any inherited margins from pushing line */
+.contact-header .accent-line {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: 1.2fr 1fr;
   gap: 80px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .contact-info h2 {
@@ -63,6 +89,20 @@ body {
   width: 100%;
   min-height: 640px;
   border: none;
+}
+
+.contact-header {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 60px;   /* center horizontally */
+  text-align: center;   /* center text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* center accent line perfectly */
+}
+.contact-header h1,
+.contact-header p {
+  text-align: center;
 }
 
 
@@ -126,20 +166,41 @@ body {
   margin-top: 10px;
 }
 
+.form-group select {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #ffffff;
+  font-size: 14.5px;
+}
+
+.form-group select option {
+  color: #0f172a;
+}
+
+/* Terms checkbox */
+.form-group.terms {
+  margin-top: 8px;
+}
+
+.form-group.terms .checkbox {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  color: #cbd5e1;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.form-group.terms input {
+  accent-color: #f97316;
+  transform: translateY(3px);
+}
 
 
 /* MOBILE */
-@media (max-width: 900px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 60px;
-    text-align: center;
-  }
 
-  .contact-form iframe {
-    min-height: 720px;
-  }
-}
 
 
 
@@ -157,32 +218,7 @@ body {
   color: #ffffff;
 }
 
-/* MAIN WRAPPER */
-.legal-wrapper {
-  width: 100%;
-  max-width: 1320px;
-  margin: 0 auto;
-  padding-left: 64px;
-  padding-right: 64px;
 
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 60px;
-}
-
-@media (max-width: 1024px) {
-  .legal-wrapper {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-
-@media (max-width: 600px) {
-  .legal-wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
 
 /* ================================
    HEADING (FORCED ABOVE EVERYTHING)
@@ -323,12 +359,7 @@ body {
 }
 
 /* GRID */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
+
 
 /* LEFT SIDE */
 .contact-left h3 {
@@ -411,16 +442,7 @@ body {
    RESPONSIVE
 ================================ */
 
-@media (max-width: 900px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
 
-  .contact-right h2 {
-    font-size: 28px;
-  }
-}
 
 
 
@@ -434,9 +456,9 @@ body {
   }
 
   .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
+  grid-template-columns: 1fr;
+  gap: 60px;
+}
 
   .contact-left h3 {
     font-size: 22px;
@@ -540,4 +562,13 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.accent-line {
+  width: 72px;
+  height: 3px;
+  background: linear-gradient(90deg, #f97316, #ff9f4a);
+  border-radius: 2px;
+  margin: 20px auto;
+  display: block;
 }
