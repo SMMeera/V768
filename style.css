@@ -15,22 +15,11 @@ section {
 }
 
 /* Content stays centered */
-.container {
-  max-width: 1320px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 32px;
-  padding-right: 32px;
-}
 
 
 
-@media (max-width: 768px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
+
+
 
 
 :root {
@@ -68,26 +57,10 @@ section {
    GLOBAL CONTAINER – SINGLE SOURCE
 ================================ */
 
-.container {
-  max-width: 1320px;   /* enterprise width */
-  margin: 0 auto;
-  padding: 0 24px;     /* equal left & right spacing */
-}
+
 
 /* Brand accent line */
-.accent-line {
-  width: 64px;
-  height: 3px;
-  background: linear-gradient(90deg, #f97316, #ff9f4a);
-  margin: 16px 0 24px;
-  border-radius: 2px;
-}
 
-@media (max-width: 768px) {
-  .accent-line {
-    margin: 16px auto; /* 👈 centers it below text */
-  }
-}
 
 * {
   margin: 0;
@@ -199,11 +172,7 @@ main {
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  .nav-container {
-    padding: 0 16px;
-  }
-}
+
 
 .nav-links a {
   text-decoration: none;
@@ -229,7 +198,39 @@ main {
   width: 100%;
 }
 
+/* ===============================
+   GLOBAL WIDTH LOCK (ALL DEVICES)
+================================ */
 
+.container {
+  width: 100%;
+  max-width: 1320px;   /* Desktop + 4K */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 
 
 /* HERO */
@@ -300,9 +301,7 @@ main {
 }
 
 /* Center accent line */
-.hero-content .accent-line {
-  margin: 16px auto 24px;
-}
+
 
 
 /* WHO WE ARE */
@@ -357,9 +356,7 @@ main {
   margin-bottom: 16px;
   max-width: 520px;
 }
-.accent-line{
-  margin: 8px 0 14px;
-}
+
 
 /* ================================
    REVEAL ANIMATIONS
@@ -1073,9 +1070,7 @@ main {
   margin-bottom: 12px;
 }
 
-.contact-right .accent-line {
-  margin-bottom: 32px;
-}
+
 
 /* DETAILS */
 .contact-details {
@@ -1410,14 +1405,7 @@ img {
    (PREMIUM DEPTH)
 ========================= */
 /* MOBILE – CENTER HERO ACCENT LINE */
-@media (max-width: 768px) {
 
-  .hero .accent-line {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-}
 
 /* WHO WE ARE – custom spacing override */
 section.who-we-are.section {
@@ -1440,11 +1428,7 @@ section.who-we-are.section {
   display: block;
 }
 
-.accent-line {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  display: block;
-}
+
 
 .section-header,
 .hero-content,
