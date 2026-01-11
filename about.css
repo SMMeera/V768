@@ -79,6 +79,14 @@ html, body {
 .nav-links {
   display: flex;
   gap: 28px;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    justify-content: center;
+    width: 100%;
+    gap: 16px;
+  }
 }
 
 .nav-links a {
@@ -468,10 +476,7 @@ body {
   transform: translateY(-120px);
 }
 
-.about-vision-mission .accent-line {
-  margin: 16px auto 48px auto;
-  display: block;
-}
+
 
 /* ================================
    RESPONSIVE
@@ -584,9 +589,7 @@ body {
   margin-bottom: 12px;
 }
 
-.why-content .accent-line {
-  margin: 0 0 48px;
-}
+
 
 /* ================================
    WHY ITEM
@@ -688,11 +691,8 @@ body {
   }
 }
 
-@media (max-width: 900px) {
-  .why-content .accent-line{
-    margin: 16px auto 48px;
-  }
-}
+
+
 
 
 /* ================================
@@ -1063,9 +1063,7 @@ body {
   margin-bottom: 12px;
 }
 
-.contact-right .accent-line {
-  margin-bottom: 32px;
-}
+
 
 /* DETAILS */
 .contact-details {
@@ -1492,26 +1490,12 @@ body {
 }
 
 
-/* FIX ACCENT LINE POSITION ON MOBILE */
-@media (max-width: 768px) {
-  .accent-line {
-    margin: 12px auto 28px auto;
-  }
-
-  /* If accent line is inside text blocks */
-  h1 + .accent-line,
-  h2 + .accent-line,
-  h3 + .accent-line {
-    display: block;
-    margin: 14px auto 24px auto;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .contact-right .accent-line {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.accent-line {
+  width: 72px;
+  height: 3px;
+  background: linear-gradient(90deg, #f97316, #ff9f4a);
+  border-radius: 2px;
+  margin: 20px auto;
+  display: block;
 }
 
